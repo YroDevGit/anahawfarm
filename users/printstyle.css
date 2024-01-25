@@ -1,0 +1,90 @@
+
+  .searchfield{border:solid 1px #9e9e9e;width: 300px;outline: none;border:solid 1px #d4d4d4; height: 30px;}
+  .spaces{margin-left: 2px;margin-right: 2px;}
+    .smain{padding-top: 100px; background-color: white;}
+    .stable{margin-left: 20px; margin-right: 20px;}
+    .stable table{width: 100%;}
+    .stable table, .stable th, .stable tr, .stable td{border:solid 1px #b8b7b7;border-collapse: collapse;text-align: center;}
+    .stable th{background-color: #38d39f;border:solid 1px white;}
+    .stitle{margin-bottom: 20px;}
+    .stitle div span{font-size: 23px;font-family: cursive;}
+    .bbtn{
+    --color: #000000;
+    --background-color: #d8d8d8;
+    --border-color: darken(#d8d8d8, 7.5%);
+    color: var(--color);
+    font-family: inherit;
+    background-color: var(--background-color);
+    padding: 0.6rem 0.9rem;
+    border: solid 1px var(--border-color);
+    outline: none;
+    position: relative;
+    border-radius: 0.5rem;
+    user-select: none;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4), 0 -0.3rem 0.6rem rgba(0, 0, 0, 0.2) inset;
+    transition: box-shadow 64ms ease-out;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    -webkit-appearance: button;
+    overflow: visible;
+    }
+    .viewbtn{
+    --color: #ffffff;
+    --background-color: #00c853;
+    --border-color: #00a243;
+
+
+    }
+    .main-panel{
+      background-color: white;
+    }
+
+    .main-add{width: 200px; height: 35px;}
+    .ybtn{
+      border-radius:5px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 4px 4px #d4d4d4;
+    }
+
+    .main-add:active{
+      transform: translate(+3px,+3px);
+      box-shadow: 1px 1px #d4d4d4;
+    }
+
+    .no-border{border:solid 1px #c6c3c3;}
+
+    .main-add:before{
+      content: '';
+      position: absolute;
+      background-image: linear-gradient(to right,#f40bc1,#f4ec0b, #f4aa0b ,#f4ec0b, #f40bc1);
+      top: 50%;
+      bottom: 50%;
+      right: 50%;
+      left: 50%;
+      transition: 0.8s;
+      z-index: -1;
+    }
+
+    .main-add:hover:before{
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+    .main-add:focus:before{
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+
+    .tablebtn{
+      width: 80px;
+    }
+    .new-content{
+    	margin-top: 10px;
+      display: inline-block;
+      width: 700px;
+      padding: 0px 10px 0px 10px;
+    }
