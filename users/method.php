@@ -183,17 +183,9 @@ include '../db/connections.php';
 
 <div align="center">
   
- <?php
- $impid = $_GET['impid'];
- if($impid=="0510"){
 
- }
- else{
-
-  ?>
-<script type="text/javascript">window.location.href="dashboard.php"</script>
   <?php
- }
+ 
  if(hasNotif($_SESSION['userid'])==1){
 
   ?>

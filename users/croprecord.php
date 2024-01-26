@@ -35,7 +35,7 @@ include 'newstyle.css';
     
 
 
-<div id="modals" style="display: none;">
+<div id="modals" style="">
   <div class="modals" align="center">
     <div>
       

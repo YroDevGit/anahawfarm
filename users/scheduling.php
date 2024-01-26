@@ -30,6 +30,17 @@ function cropscb($user,$classname, $xname,$id){
   <?php
 }
 
+
+function getCropsAll($userid){
+  $sql = "select * from cropp where uzer = $userid";
+  $ret =0;
+  $res = setQuery($sql);
+  if($coll = getData($res)){
+    $ret = 1;
+  }
+  return $ret;
+}
+
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -243,14 +254,17 @@ function cropscb($user,$classname, $xname,$id){
   <div class="wrapper ">
     
 
-<?php include 'sidebar.php'; ?>
+<?php include 'sidebar1.php'; ?>
 <div class="main-panel">
   <?php include 'topbar.php'; ?>
 
 
 
   <div>
-  <div class="smain" style="background-color: white;">
+  <?php
+if(getCropsAll($user)==1){
+  ?>
+<div class="smain" style="background-color: white;">
     <div>
       <div>
         
@@ -304,6 +318,15 @@ function cropscb($user,$classname, $xname,$id){
       </div>
     </div>
   </div>
+  <?php
+}
+else{
+   ?>
+<div align="center" style="padding-top: 200px;">
+  <div><h2>No data to display, please add crop first</h2></div>
+
+</div>
+ <?php } ?>
   <style type="text/css">
 
   .searchfield{border:solid 1px #9e9e9e;width: 300px;outline: none;border:solid 1px #d4d4d4; height: 30px;}

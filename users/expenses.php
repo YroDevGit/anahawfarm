@@ -219,7 +219,7 @@ include '../db/connections.php';
   <div class="wrapper ">
     
 
-<?php include 'sidebar.php'; ?>
+<?php include 'sidebar1.php'; ?>
 <div class="main-panel">
   <?php include 'topbar.php'; ?>
 

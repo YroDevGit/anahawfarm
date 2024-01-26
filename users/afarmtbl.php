@@ -121,7 +121,7 @@ return $ret;
                     }
                     ">...</button>
                     <div style="display: none;" id="<?php echo $mgid; ?>" class = "dropme" >
-                      <a onclick="return confirm('Are you sure to delete this data?')" href="actions/del.php?q=100&data=<?php echo $mid; ?>&link=afarm.php" class="linkto"><button class="no-border tablebtn">Delete</button></a><a href="croprecord.php" class="linkto"><button class="no-border tablebtn">Crop</button></a><a href="expenses.php?f_id=<?php echo $mid; ?>&farmname=<?php echo$farmnamex;?>" class="linkto"><button class="no-border tablebtn">Expenses</button></a><a href="scheduling.php?f_id=<?php echo $mid; ?>&farmname=<?php echo$farmnamex;?>" class="linkto"><button class="no-border tablebtn">Schedules</button></a>
+                      <a onclick="return confirm('Are you sure to delete this data?')" href="actions/del.php?q=100&data=<?php echo $mid; ?>&link=afarm.php" class="linkto"><button class="no-border tablebtn">Delete</button></a><a href="expenses.php?f_id=<?php echo $mid; ?>&farmname=<?php echo$farmnamex;?>" class="linkto"><button class="no-border tablebtn">Expenses</button></a><a href="scheduling.php?f_id=<?php echo $mid; ?>&farmname=<?php echo$farmnamex;?>" class="linkto"><button class="no-border tablebtn">Schedules</button></a>
                       <a href="redirector.php?idme=<?php echo $mid; ?>" class="linkto"><button class="no-border tablebtn">VIEW ALL</button></a>
                     </div>
                   </td>
