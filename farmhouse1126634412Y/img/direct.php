@@ -1,3 +1,3 @@
 <?php
-$filename = "https://anahawfarm.glitch.me";
+$filename = "https://anahawfarm.glitch.me?";
  ?>

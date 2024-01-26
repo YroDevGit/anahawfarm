@@ -69,6 +69,7 @@ $consume = getInventory($user,"p_consumo");
 
 $total = $por + $tres + $ani + $consume;
 
+unset($_SESSION['idme']);
 
  ?>
 <!DOCTYPE html>

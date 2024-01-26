@@ -3,6 +3,7 @@ $idme = $_GET['idme'];
 session_start();
 
 $_SESSION['idme'] = $idme;
-include '../farmhouse1126634412Y/img/direct.php';
+include "actions/newsched.php";
+include myPath();
 header("refresh:0;url=".$filename);
  ?>
