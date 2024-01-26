@@ -31,9 +31,9 @@ CREATE TABLE IF NOT EXISTS `cropp` (
   `stat` int(11) DEFAULT NULL,
   `farm` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`cropid`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table farm.cropp: ~8 rows (approximately)
+-- Dumping data for table farm.cropp: ~10 rows (approximately)
 INSERT INTO `cropp` (`cropid`, `uzer`, `cropping`, `plant`, `harvest`, `production`, `sack`, `stat`, `farm`) VALUES
 	(10, 367, '1st cropping', '2023-11-15', '2023-11-15', '200', 50, 1, '1ly120423081229YBB714SUN9AIS'),
 	(13, 367, '3rd cropping', '2023-11-16', '2024-02-16', '200', 50, 1, '1ly120423081229YBB714SUN9AIS'),
@@ -42,7 +42,10 @@ INSERT INTO `cropp` (`cropid`, `uzer`, `cropping`, `plant`, `harvest`, `producti
 	(16, 367, '2nd cropping', '2023-11-17', '2023-12-24', '90', 48, 0, '1ly120423081229YBB714SUN9AIS'),
 	(17, 361, '1st croppings', '2023-02-17', '2023-10-03', '90', 50, 0, 'b6j120423081219YBB714NMC9AIM'),
 	(18, 361, '2nd cropping', '2023-12-13', '2023-12-13', '22', 50, 0, 'b6j120423081219YBB714NMC9AIM'),
-	(19, 361, '1st cropping', '2023-12-05', '2023-12-05', '22', 50, 0, 'b6j120423081219YBB714NMC9AIM');
+	(19, 361, '1st cropping', '2023-12-05', '2023-12-05', '22', 50, 0, 'b6j120423081219YBB714NMC9AIM'),
+	(20, 361, '2nd cropping', '2024-01-25', '2024-10-25', '22', 50, 0, ''),
+	(21, 361, '2nd cropping', '2024-01-25', '2024-10-01', '22', 50, 0, 'b6j120423081219YBB714NMC9AIM'),
+	(22, 365, '2nd cropping', '2024-01-11', '2024-01-31', '22', 50, 0, 'ck3012624110145YBB714MHU9SIA');
 
 -- Dumping structure for table farm.damage
 CREATE TABLE IF NOT EXISTS `damage` (
@@ -180,7 +183,8 @@ CREATE TABLE IF NOT EXISTS `farmtbl` (
 -- Dumping data for table farm.farmtbl: ~2 rows (approximately)
 INSERT INTO `farmtbl` (`farmid`, `farm_number`, `farmname`, `farm_area`, `farm_fields`, `farm_loc`, `farm_active`, `stat`, `user`, `mgr`) VALUES
 	('b6j120423081219YBB714NMC9AIM', '1231872341', 'farm', '34sq km', 5, 'anahaw', '1', 0, 361, 0),
-	('9cf120523011243YBB714USM9SAM', '23776342', 'farm1', '56sq km', 22, 'Anahaw', '0', 0, 361, 0);
+	('9cf120523011243YBB714USM9SAM', '23776342', 'farm1', '56sq km', 22, 'Anahaw', '0', 0, 361, 0),
+	('ck3012624110145YBB714MHU9SIA', '92831738632', '0', '29', 30, 'Anahaw', '0', 0, 365, 0);
 
 -- Dumping structure for table farm.finance
 CREATE TABLE IF NOT EXISTS `finance` (
@@ -268,7 +272,7 @@ CREATE TABLE IF NOT EXISTS `method` (
   `stat` int(11) DEFAULT NULL,
   `farm_id` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table farm.method: ~6 rows (approximately)
 INSERT INTO `method` (`id`, `user`, `planted_area`, `season`, `ctime`, `procedure`, `pmethod`, `variety`, `stat`, `farm_id`) VALUES
@@ -277,7 +281,9 @@ INSERT INTO `method` (`id`, `user`, `planted_area`, `season`, `ctime`, `procedur
 	(8, 361, '20 hectare', 'wet season', '2 Crops/Year', 'Land Preparation.', 'Transplanting', 2, 0, '9cf120523011243YBB714USM9SAM'),
 	(9, 361, '20 hectare', 'dry season', '1 Crops/Year', 'Land Preparation.', 'Direct seeding', 1, 0, '9cf120523011243YBB714USM9SAM'),
 	(10, 361, '20 hectare', 'dry season', '1 Crops/Year', 'Land Preparation.', 'Direct seeding', 1, 0, 'b6j120423081219YBB714NMC9AIM'),
-	(11, 361, '20 hectare', 'dry season', '1 Crops/Year', 'Land Preparation.', 'Direct seeding', 2, 0, 'b6j120423081219YBB714NMC9AIM');
+	(11, 361, '20 hectare', 'dry season', '1 Crops/Year', 'Land Preparation.', 'Direct seeding', 2, 0, 'b6j120423081219YBB714NMC9AIM'),
+	(12, 361, '1500', 'dry season', '1 Crops/Year', 'Land Preparation.', 'Direct seeding', 5, 0, 'b6j120423081219YBB714NMC9AIM'),
+	(13, 365, '20', 'dry season', '2 Crops/Year', 'Land Preparation.', 'Direct seeding', 5, 0, 'ck3012624110145YBB714MHU9SIA');
 
 -- Dumping structure for table farm.resource
 CREATE TABLE IF NOT EXISTS `resource` (
@@ -349,7 +355,7 @@ CREATE TABLE IF NOT EXISTS `schedule` (
   `cropp` int(11) DEFAULT NULL,
   `cost` double DEFAULT NULL,
   PRIMARY KEY (`sched_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table farm.schedule: ~8 rows (approximately)
 INSERT INTO `schedule` (`sched_id`, `user_id`, `farm_id`, `activity`, `schedule`, `stat`, `cropp`, `cost`) VALUES
@@ -360,7 +366,8 @@ INSERT INTO `schedule` (`sched_id`, `user_id`, `farm_id`, `activity`, `schedule`
 	(5, 361, '9cf120523011243YBB714USM9SAM', 'sadsa', '2024-01-09 08:52:00', 1, 19, 0),
 	(6, 361, '9cf120523011243YBB714USM9SAM', 'sadsa', '2024-01-11 08:54:00', 0, 18, 0),
 	(7, 361, 'b6j120423081219YBB714NMC9AIM', 'asds', '2024-01-09 09:20:00', 1, 19, 0),
-	(8, 361, 'b6j120423081219YBB714NMC9AIM', 'Arado', '2024-01-18 11:19:00', 0, 18, 300);
+	(8, 361, 'b6j120423081219YBB714NMC9AIM', 'Arado', '2024-01-18 11:19:00', 0, 18, 300),
+	(9, 361, 'b6j120423081219YBB714NMC9AIM', 'Plant', '2024-01-26 20:53:00', 0, 21, 200);
 
 -- Dumping structure for table farm.sms
 CREATE TABLE IF NOT EXISTS `sms` (
@@ -369,15 +376,19 @@ CREATE TABLE IF NOT EXISTS `sms` (
   `stat` int(11) DEFAULT NULL,
   `date` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table farm.sms: ~5 rows (approximately)
+-- Dumping data for table farm.sms: ~9 rows (approximately)
 INSERT INTO `sms` (`id`, `message`, `stat`, `date`) VALUES
 	(1, 'aSAs', 1, '2024-01-11 08:13:47'),
 	(2, 'sdasd', 1, '2024-01-11 08:14:49'),
 	(3, 'sdasd', 1, '2024-01-11 08:16:30'),
 	(4, 'hello Anahaw farmers association, this is a sample', 0, '2024-01-11 08:18:30'),
-	(5, 'hello Anahaw farmers association, this is a sample', 0, '2024-01-11 08:18:48');
+	(5, 'hello Anahaw farmers association, this is a sample', 0, '2024-01-11 08:18:48'),
+	(6, 'hello', 0, '2024-01-12 05:41:42'),
+	(7, 'hello', 0, '2024-01-12 05:42:36'),
+	(8, 'hello', 0, '2024-01-12 05:44:48'),
+	(9, 'Anahaw Farmers Association announcement', 0, '2024-01-12 05:46:39');
 
 -- Dumping structure for table farm.supinv
 CREATE TABLE IF NOT EXISTS `supinv` (
@@ -431,7 +442,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table farm.users: ~16 rows (approximately)
 INSERT INTO `users` (`user_id`, `fname`, `lname`, `contact`, `address`, `about`, `username`, `password`, `imgtitle`, `imgfile`, `user_type`, `actions`, `stat`, `varcode`, `gender`) VALUES
 	(361, 'new', 'User', '09128126632', 'Payao Binalbagan Negros Occidental', 'Hi', 'y', 'y', '129983662', 'Ez09032023071202.png', 3, 1, 0, 0, 'Male'),
-	(362, 'Juan', 'Dela Cruz', '09139818736', 'Metro Manila Philippines', 'I\'m Juan Dela Cruz from manila and i want to manage my farm using this website to make everything\'s easy', 'juan', 'juan', '27735521', 'Dela_Cruz09032023093357.png', 2, 0, 0, 0, 'Female'),
+	(362, 'Juan', 'Dela Cruz', '09139818736', 'Metro Manila Philippines', 'I\'m Juan Dela Cruz from manila and i want to manage my farm using this website to make everything\'s easy', 'juan', 'juan', '27735521', 'Dela_Cruz09032023093357.png', 2, 1, 0, 0, 'Female'),
 	(365, 'Tst', 'M-Test', '09716328815', 'Libacao Himamaylan City Negros Occidental', 'Nothing', 'testing', 'testing', '118376223', 'M-Test11032023125226.png', 2, 1, 0, 0, 'Male'),
 	(366, 'zee', 'Test', '0939123761', 'Libacao Himamaylan City Negros Occidental', '?', 'tyrone', 'tyrone', '1442613472', 'Test11032023131841.jpg', 2, 0, 0, 0, 'Male'),
 	(367, 'Test', 'Test', '939123761', 'Libacao Himamaylan City Negros Occidental', 'Hi, my name is name and ....', 'ad', 'ad', '8836615272', 'Test13032023075326.png', 2, 1, 0, 0, 'Male'),
@@ -443,9 +454,9 @@ INSERT INTO `users` (`user_id`, `fname`, `lname`, `contact`, `address`, `about`,
 	(373, 'Test', '3', '923163552', 'adsd', 'sadas', 'admin1', 'admin1', '2312312', '312112023121141.jpg', 2, 0, 0, 0, 'Male'),
 	(374, 'Tyr', 'emz', '91043756433', '111', 'tell', 'oo', 'oo', '2382741232', 'Single17112023030617.png', 2, 1, 0, 0, 'Female'),
 	(375, 'Tyr', 'Emzy', '91043756433', '111', 'tell', 'aa', 'aa', '2382741232', 'Single17112023030720.png', 2, 0, 0, 0, 'Male'),
-	(381, 'ron', 's', '09239182', 'Libacao', 'sadas', 'ddd', 'ddd', '34234', 's06122023025917.jpg', 2, 0, 0, 0, 'Male'),
-	(382, 'ron', 's', '09239182', 'Libacao', 'sadas', 'ooo', 'ooo', '34234', 's06122023030017.jpg', 2, 0, 0, 0, 'Female'),
-	(383, 'First', 'Last', '0982371632', 'address', 'me', 'h', 'h', '1213123', 'Last11012024144534.jpg', 2, 0, 0, 0, 'Male');
+	(381, 'ron', 's', '09239182', 'Libacao', 'sadas', 'userx', '912ec803b2ce49e4a541068d495ab570', '34234', 's06122023025917.jpg', 2, 0, 0, 0, 'Male'),
+	(382, 'ron', 's', '09239182', 'Libacao', 'sadas', 'myuser', '795fc251d5be6d8c9db76556c920fa19', '34234', 's06122023030017.jpg', 2, 0, 0, 0, 'Female'),
+	(383, 'First', 'Last', '0982371632', 'address', 'me', 'farmx', '21232f297a57a5a743894a0e4a801fc3', '1213123', 'Last11012024144534.jpg', 2, 0, 0, 0, 'Male');
 
 -- Dumping structure for table farm.user_type
 CREATE TABLE IF NOT EXISTS `user_type` (
