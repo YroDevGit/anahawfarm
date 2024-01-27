@@ -57,7 +57,7 @@ include '../db/connections.php';
               <table>
                 <form method="post" action="actions/admem.php?action=1">
                 <tr style="display: none;">
-                <td class="formfield"><label>Farm #: </label></td>
+                <td class="formfield"><label >Farm #: </label></td>
                 <td class="formfield"><?php farms($user,"memf","crfarm") ?></td>
                 </tr>
                 <tr>
@@ -474,6 +474,7 @@ include 'newstyle.css';
     }
   }
 }
+
   </script>
 </body>
 
