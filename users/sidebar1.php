@@ -179,6 +179,12 @@
       </div>
     </div>
 
+    <style type="text/css">
+      .nav li a p{
+        color:black;font-weight:900;
+      }
+    </style>
+
 
   <script type="text/javascript">
     window.onload = function(){

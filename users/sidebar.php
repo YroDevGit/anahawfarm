@@ -220,6 +220,15 @@
   .sidebar .sidebar-wrapper li.active > a:not([data-toggle="collapse"]):after, .sidebar .sidebar-wrapper li.active > [data-toggle="collapse"] + div .nav li:after{
     display: none;
   }
+
+
 </style>
+
+  <style type="text/css">
+      .nav li a p{
+        color:black;font-weight:900;
+      }
+    </style>
+
 
   
